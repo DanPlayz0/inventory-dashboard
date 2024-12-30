@@ -40,8 +40,8 @@ export function AddItemModal(props: AddItemModalProps) {
           <DialogTitle>Add New Item</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit}>
-          <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
+          <div className="space-y-4 py-4">
+            <div className="space-y-2 items-center gap-4">
               <Label htmlFor="name" className="text-right">
                 Name
               </Label>
@@ -52,19 +52,19 @@ export function AddItemModal(props: AddItemModalProps) {
                 className="col-span-3"
               />
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="amount" className="text-right">
-                Amount
+            <div className="space-y-2 items-center gap-4">
+              <Label htmlFor="quantity" className="text-right">
+                Quantity
               </Label>
               <Input
-                id="amount"
+                id="quantity"
                 type="number"
                 value={item.quantity}
-                onChange={(e) => setItem({ quantity: parseInt(e.target.value) || 0 })}
+                onChange={(e) => setItem({ quantity: parseInt(e.target.value) || 1 })}
                 className="col-span-3"
               />
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
+            <div className="space-y-2 items-center gap-4">
               <Label htmlFor="last_known" className="text-right">
                 Location
               </Label>
